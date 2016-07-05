@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
 use App\Student;
 use App\Employee_master;
 
@@ -72,12 +71,17 @@ class CustomController extends Controller
          
     }
     
-    function insert1()
+    function insert1(Request $request)
     {
-        //$employee=$this->doInsert();
-        //$employee=new Employee_master;
-        //$result['respose']=$employee->all();
-        return view ('insert1');
+        $employeeName=$request->input('employee_name');
+        $employeeEmail=$request->input('employee_email');
+        $employeeDepartment=$request->input('employee_dept');
+
+        $employee=new Employee_master;
+        $employee->employee_name=$employeeName;
+        $employee->employee_email=$employeeEmail;
+        $employee->employee_dept=$employeeDepartment;
+        $employee->save();
     }
     
 }

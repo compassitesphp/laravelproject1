@@ -30,4 +30,4 @@ Route::get('/ins','CustomController@insertEmployee');
 Route::get('/doInsert','CustomController@doInsert');
 //Route::post('/doInsert','CustomController@handleInsert');
 
-Route :: get('/insert1/{id}','CustomController@insert1');
+Route::get('/insert1','CustomController@insert1');
