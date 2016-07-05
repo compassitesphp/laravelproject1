@@ -28,9 +28,13 @@ Route ::get('fi','CustomController@First');
 Route::get('/list','CustomController@listEmployee');
 Route::get('/ins','CustomController@insertEmployee');
 
+<<<<<<< HEAD
 Route::get('/insert','CustomController@doInsert');
 Route :: post('/store','CustomController@store');
 
 
 //Route::post('/doInsert','CustomController@handleInsert');
 //Route ::post('/{id}/delete','CustomController@doDelete');
+=======
+Route::get('/insert1','CustomController@insert1');
+>>>>>>> 8d528b5fffd84e97d242946bb688acd771cf5896

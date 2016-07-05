@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
 use App\Student;
 use App\Employee_master;
 
@@ -72,17 +71,27 @@ class CustomController extends Controller
          
     }
     
+<<<<<<< HEAD
     function store(Requests $request)
     {
            
         $employeeName=$request->input('employee_name');
         $employeeEmail=$request->input('employee_email');
         $employeeDepartment=$request->input('employee_dept');
+=======
+    function insert1(Request $request)
+    {
+        $employeeName=$request->input('employee_name');
+        $employeeEmail=$request->input('employee_email');
+        $employeeDepartment=$request->input('employee_dept');
+
+>>>>>>> 8d528b5fffd84e97d242946bb688acd771cf5896
         $employee=new Employee_master;
         $employee->employee_name=$employeeName;
         $employee->employee_email=$employeeEmail;
         $employee->employee_dept=$employeeDepartment;
         $employee->save();
+<<<<<<< HEAD
        
     }
     
@@ -94,6 +103,8 @@ class CustomController extends Controller
         dd($emp->employee_dept);
         return view('dd');
 
+=======
+>>>>>>> 8d528b5fffd84e97d242946bb688acd771cf5896
     }
     
 }
