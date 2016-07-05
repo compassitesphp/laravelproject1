@@ -21,3 +21,13 @@ Route ::get('/se','HomeController@Second');
 Route ::get('/he','CustomController@Hello');
 Route ::get('/say/{name?}','CustomController@sayName');
 Route ::get('fi','CustomController@First');
+
+//Route::get('/list','CustomController@ListStudent');
+//Route::get('/ins','CustomController@insertStudent');
+
+Route::get('/list','CustomController@listEmployee');
+Route::get('/ins','CustomController@insertEmployee');
+Route::get('/doInsert','CustomController@doInsert');
+//Route::post('/doInsert','CustomController@handleInsert');
+
+Route :: get('/insert1/{id}','CustomController@insert1');
