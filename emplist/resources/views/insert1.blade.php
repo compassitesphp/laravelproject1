@@ -5,6 +5,8 @@
             </style>
     </head>
     <body>
-        
-        <p> {{$_GET['employee_name']}}</p>
+        <p> inserted new record <a>href='http://localhost:8000/list'</a></p>
+       
+       
     </body>
+</html>

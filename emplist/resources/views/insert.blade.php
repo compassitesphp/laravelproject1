@@ -13,8 +13,8 @@
         <h2>Enter the employee details</h2>
         <p><span class="error">* required field.</span></p>
 
-        <form action="insert1" method="GET">
-
+        <form action="insert1" method="POST">
+             
             employee_name:
             <input type="text" name="employee_name" >
             <span class="error">* </span>

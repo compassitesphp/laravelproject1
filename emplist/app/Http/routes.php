@@ -27,7 +27,10 @@ Route ::get('fi','CustomController@First');
 
 Route::get('/list','CustomController@listEmployee');
 Route::get('/ins','CustomController@insertEmployee');
-Route::get('/doInsert','CustomController@doInsert');
-//Route::post('/doInsert','CustomController@handleInsert');
 
-Route :: get('/insert1/{id}','CustomController@insert1');
+Route::get('/insert','CustomController@doInsert');
+Route :: post('/store','CustomController@store');
+
+
+//Route::post('/doInsert','CustomController@handleInsert');
+//Route ::post('/{id}/delete','CustomController@doDelete');

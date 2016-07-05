@@ -51,14 +51,15 @@
                                 <td> {{ $employeeData->employee_email }} </td>
                                 <td> {{ $employeeData->employee_dept }}</td>
                                 <td><input type="submit" value="edit"></td>
-                               <td><input type="submit" value="delete"></a></td>                              
+                                 
+                               <td><input type="submit" value="delete"></td>                              
                                 </tr>
                             @endforeach
                          </tbody>
                     </table>
      </div> 
     <div class="container">
-        <form action="doInsert" method="GET">
+        <form action="insert" method="GET">
             <input type="submit" value="insert">
         </form> 
     </div>  

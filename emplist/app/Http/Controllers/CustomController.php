@@ -72,12 +72,28 @@ class CustomController extends Controller
          
     }
     
-    function insert1()
+    function store(Requests $request)
     {
-        //$employee=$this->doInsert();
-        //$employee=new Employee_master;
-        //$result['respose']=$employee->all();
-        return view ('insert1');
+           
+        $employeeName=$request->input('employee_name');
+        $employeeEmail=$request->input('employee_email');
+        $employeeDepartment=$request->input('employee_dept');
+        $employee=new Employee_master;
+        $employee->employee_name=$employeeName;
+        $employee->employee_email=$employeeEmail;
+        $employee->employee_dept=$employeeDepartment;
+        $employee->save();
+       
+    }
+    
+    
+    function doDelete($id)
+    {
+        $emp = Employee_master::find($id);
+        $emp->delete();
+        dd($emp->employee_dept);
+        return view('dd');
+
     }
     
 }
