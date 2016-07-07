@@ -50,9 +50,13 @@
                                 <td> {{ $employeeData->employee_name }} </td>
                                 <td> {{ $employeeData->employee_email }} </td>
                                 <td> {{ $employeeData->employee_dept }}</td>
-                                <td><input type="submit" value="edit"></td>
+                            
                                  
-                               <td><input type="submit" value="delete"></td>                              
+                               
+                                       
+                                       <td><a href='http://localhost:8000/emp/{{$employeeData->id}}/delete'> delete</td>        
+                                       
+                               <td><a href='http://localhost:8000/emp/{{$employeeData->id}}/edit'> edit </td>  
                                 </tr>
                             @endforeach
                          </tbody>

@@ -71,40 +71,63 @@ class CustomController extends Controller
          
     }
     
-<<<<<<< HEAD
-    function store(Requests $request)
-    {
-           
-        $employeeName=$request->input('employee_name');
-        $employeeEmail=$request->input('employee_email');
-        $employeeDepartment=$request->input('employee_dept');
-=======
     function insert1(Request $request)
     {
         $employeeName=$request->input('employee_name');
         $employeeEmail=$request->input('employee_email');
         $employeeDepartment=$request->input('employee_dept');
 
->>>>>>> 8d528b5fffd84e97d242946bb688acd771cf5896
         $employee=new Employee_master;
         $employee->employee_name=$employeeName;
         $employee->employee_email=$employeeEmail;
         $employee->employee_dept=$employeeDepartment;
-        $employee->save();
-<<<<<<< HEAD
-       
+        $employee->save(); 
+        
+        return view('insert1');
     }
     
     
     function doDelete($id)
     {
-        $emp = Employee_master::find($id);
+        $employee=new Employee_master;
+        $emp = $employee->find($id);
         $emp->delete();
-        dd($emp->employee_dept);
-        return view('dd');
+        //dd($emp->employee_dept);
+         return redirect('/emp/list');
+        //return view('delete');
+    }
+    
+    function doEdit($id)
+    {
+        $employee=new Employee_master;
+        $emp=$employee->find($id);
+        //$result['response']=$emp->all();
+        $data['employeeId']=$emp->id;
+        $data['employeeName']=$emp->employee_name;
+        $data['employeeEmail']= $emp->employee_email;
+        $data['employeeDepartment']= $emp->employee_dept;
+        
+       
+        return view('edit',$data);
+       
+    }
+    
+    
+    function edit1(Request $request)
+    {
+        $employeeName=$request->input('employee_name');
+        $employeeEmail=$request->input('employee_email');
+        $employeeDepartment=$request->input('employee_dept');
+        $employeeId=$request->input('employee_id');
 
-=======
->>>>>>> 8d528b5fffd84e97d242946bb688acd771cf5896
+        $employee=new Employee_master;
+        $data['employee_name']=$employeeName;
+        $data['employee_email']=$employeeEmail;
+        $data['employee_dept']=$employeeDepartment;
+        $employee->where('id',$employeeId)->update($data);
+        
+        return redirect('/emp/list');
+        
     }
     
 }

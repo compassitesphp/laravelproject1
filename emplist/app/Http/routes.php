@@ -25,16 +25,18 @@ Route ::get('fi','CustomController@First');
 //Route::get('/list','CustomController@ListStudent');
 //Route::get('/ins','CustomController@insertStudent');
 
-Route::get('/list','CustomController@listEmployee');
-Route::get('/ins','CustomController@insertEmployee');
+Route::get('emp/list','CustomController@listEmployee');
+Route::get('emp/ins','CustomController@insertEmployee');
 
-<<<<<<< HEAD
-Route::get('/insert','CustomController@doInsert');
-Route :: post('/store','CustomController@store');
+Route::get('emp/insert','CustomController@doInsert');
+Route::get('emp/insert1','CustomController@insert1');
+
+//Route :: post('/store','CustomController@store');
 
 
 //Route::post('/doInsert','CustomController@handleInsert');
-//Route ::post('/{id}/delete','CustomController@doDelete');
-=======
-Route::get('/insert1','CustomController@insert1');
->>>>>>> 8d528b5fffd84e97d242946bb688acd771cf5896
+Route ::get('emp/{id}/delete','CustomController@doDelete');
+
+Route::get('emp/{id}/edit','CustomController@doEdit');
+Route::get('emp/edit1','CustomController@edit1');
+
