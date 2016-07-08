@@ -93,6 +93,7 @@ class CustomController extends Controller
         $emp = $employee->find($id);
         $emp->delete();
         //dd($emp->employee_dept);
+        \Session::flash('message','Record Deleted');
          return redirect('/emp/list');
         //return view('delete');
     }
@@ -113,7 +114,7 @@ class CustomController extends Controller
     }
     
     
-    function edit1(Request $request)
+    function edit2(Request $request)
     {
         $employeeName=$request->input('employee_name');
         $employeeEmail=$request->input('employee_email');
@@ -125,9 +126,14 @@ class CustomController extends Controller
         $data['employee_email']=$employeeEmail;
         $data['employee_dept']=$employeeDepartment;
         $employee->where('id',$employeeId)->update($data);
-        
+        \Session::flash('message','Record Edited');
         return redirect('/emp/list');
         
+    }
+    
+    function flashMessage()
+    {
+        return view('test');
     }
     
 }

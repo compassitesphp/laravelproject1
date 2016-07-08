@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>
-            .error {color: #FF0000;}
-
-        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{{ asset('/assets/css/style.css') }}">
     </head>
     <body>
 
@@ -16,12 +17,12 @@
         <form action="insert1" method="GET">
              
             employee_name:
-            <input type="text" name="employee_name" >
+            <input type="text" name="employee_name" required >
             <span class="error">* </span>
             <br><br>
 
             employee_email:
-            <input type="text" name="employee_email" >
+            <input type="text" name="employee_email" required>
             <span class="error">* </span>
             <br><br>
 

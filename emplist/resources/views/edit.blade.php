@@ -13,7 +13,7 @@
         <h2>edit the employee details</h2>
         <p><span class="error">* required field.</span></p>
 
-        <form action="/emp/edit1" method="GET">
+        <form action="/emp/edit2" method="GET">    <!route name is /emp/edit2 in route for customcontroller function edit2>
             <input type="hidden" name="employee_id" value="{{ $employeeId }}"/>
             employee_name:
             <input type="text" name="employee_name" value="{{$employeeName}}" >

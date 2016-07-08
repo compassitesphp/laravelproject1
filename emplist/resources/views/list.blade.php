@@ -7,29 +7,21 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <style>
-      body{
-          background-color: darkseagreen;
-          
-      }
-      h2{
-          text-transform: capitalize;
-      }
-      
-      
-      tr:hover
-      {background-color:#f5f5f5}
-      
-      a:hover
-      {
-          color:crimson;
-      }
-  </style>
+  <link rel="stylesheet" href="{{ asset('/assets/css/style.css') }}">
   
 </head>
 <body>     
+    @if(Session::has('message'))
+        <div class="alert">
+            
+        {{ Session ::get('message')}}
+        </div>
+        @endif
      <div class='container'>
 		   <h2>employee details</h2>
+                   <div class="div3">
+                    <img src='{{ asset('/assets/images/compass.jpg')  }}  '/>
+                   </div>
                     <table class='table table-bordered'>
     			<thead>
       			<tr>
@@ -54,9 +46,9 @@
                                  
                                
                                        
-                                       <td><a href='http://localhost:8000/emp/{{$employeeData->id}}/delete'> delete</td>        
+                                       <td><a href='/emp/{{$employeeData->id}}/delete'> Delete</td>        
                                        
-                               <td><a href='http://localhost:8000/emp/{{$employeeData->id}}/edit'> edit </td>  
+                               <td><a href='/emp/{{$employeeData->id}}/edit'> Edit </td>  
                                 </tr>
                             @endforeach
                          </tbody>
@@ -64,7 +56,7 @@
      </div> 
     <div class="container">
         <form action="insert" method="GET">
-            <input type="submit" value="insert">
+            <input type="submit" value="Insert">
         </form> 
     </div>  
     

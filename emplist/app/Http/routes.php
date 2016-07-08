@@ -12,7 +12,7 @@
 */
 
 //Route::get('/', function () {
-  //  return view('welcome');
+    //return view('welcome');
 
 
 Route::get('/id','HomeController@Index');
@@ -20,7 +20,7 @@ Route::get('/hi','HomeController@Hello');
 Route ::get('/se','HomeController@Second');
 Route ::get('/he','CustomController@Hello');
 Route ::get('/say/{name?}','CustomController@sayName');
-Route ::get('fi','CustomController@First');
+Route ::get('/fi','CustomController@First');
 
 //Route::get('/list','CustomController@ListStudent');
 //Route::get('/ins','CustomController@insertStudent');
@@ -38,5 +38,8 @@ Route::get('emp/insert1','CustomController@insert1');
 Route ::get('emp/{id}/delete','CustomController@doDelete');
 
 Route::get('emp/{id}/edit','CustomController@doEdit');
-Route::get('emp/edit1','CustomController@edit1');
+Route::get('emp/edit2','CustomController@edit2');
+
+
+
 
